@@ -298,11 +298,17 @@ No frontend or app-backend stories. Renamed prefixes for clarity: **I** (infrast
 A retrospective pass added after the milestone shipped. Fill in honestly — the value of these notes is the friction they capture, not a victory lap.
 
 - **What I'd do differently if I started this milestone today:**
+    - Step A-4 needs to exercise both tables, not just users. A select from information_schema would've made sure I had the right columns available.
 
 - **Surprises during execution:**
+    - Deadman failure path sent me an email about the failure which helped me fix the table permission above. Paid for itself on the implementation.
 
 - **Decisions that turned out to matter more than expected:**
+    - putting secrets behind a production github environment instead of as a repo secret made the setup easier and may save time on onboarding a new collaborator.
+    - Filure mode email helped (see above)
 
 - **Decisions that turned out not to matter:**
+    - Probably could've given read only user more column permissions to reduce copy paste typos. 
+    - Over all everything went smoothly.
 
 - **What this milestone taught me that I'd carry into future work:**
