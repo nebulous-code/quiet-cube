@@ -16,5 +16,14 @@
     "signups_7d": 1,
     "deletions_7d": 0,
     "net_7d": 1
+  },
+  {
+    "week_of": "2026-05-25",
+    "total_users": 1,
+    "verified": 1,
+    "unverified": 0,
+    "signups_7d": 0,
+    "deletions_7d": 0,
+    "net_7d": 0
   }
 ]
