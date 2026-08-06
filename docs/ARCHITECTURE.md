@@ -366,7 +366,7 @@ list — no separate backend endpoint.
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| GET | `/health` | None | Liveness probe |
+| GET | `/health` | None | Liveness + readiness probe. `200 {"status":"ok","database":"ok"}`, or `503 {"status":"degraded","database":"down"}` when the database probe fails |
 
 ---
 

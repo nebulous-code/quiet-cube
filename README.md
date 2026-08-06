@@ -78,7 +78,7 @@ cargo run --release   # release profile — what Render runs in production
 
 Migrations run automatically on startup via `sqlx::migrate!` — no separate migration step.
 
-Health check: `curl http://localhost:8080/api/v1/health` → `{"status":"ok"}`.
+Health check: `curl http://localhost:8080/api/v1/health` → `200 {"status":"ok","database":"ok"}`. The endpoint probes the database, so it answers `503 {"status":"degraded","database":"down"}` when Postgres is unreachable — a monitor keying off the status code sees a real outage rather than a process that is up but can't serve anything.
 
 Run the test suite:
 
